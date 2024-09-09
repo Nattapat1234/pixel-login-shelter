@@ -9,6 +9,8 @@ import SignupPage from "./pages/SignupPage";
 import PasswordRecoveryPage from "./pages/PasswordRecoveryPage";
 import ProfilePage from "./pages/ProfilePage";
 import DashboardPage from "./pages/DashboardPage";
+import WorkoutPlanPage from "./pages/WorkoutPlanPage";
+import ExerciseDetailPage from "./pages/ExerciseDetailPage";
 
 const queryClient = new QueryClient();
 
@@ -27,6 +29,8 @@ const App = () => (
           <Route path="/password-recovery" element={<PasswordRecoveryPage />} />
           <Route path="/profile" element={<ProfilePage />} />
           <Route path="/dashboard" element={<DashboardPage />} />
+          <Route path="/workout-plan" element={<WorkoutPlanPage />} />
+          <Route path="/exercise/:id" element={<ExerciseDetailPage />} />
         </Routes>
       </BrowserRouter>
     </TooltipProvider>
