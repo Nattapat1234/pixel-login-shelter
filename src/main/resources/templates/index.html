@@ -1,259 +1,54 @@
 <!DOCTYPE html>
-<html lang="th">
+<html lang="th" xmlns:th="http://www.thymeleaf.org">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ENERGYM - ระบบออกกำลังกายส่วนตัว</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <style>
-        /* Additional custom styles can be added here */
-    </style>
+    <title>ENERGYM - หน้าหลัก</title>
 </head>
-<body class="bg-gray-100 min-h-screen">
-    <header class="bg-gray-800 text-white shadow-sm">
-        <div class="container mx-auto px-4 py-4 flex justify-between items-center">
-            <div class="flex items-center">
-                <img src="/placeholder.svg" alt="Energym Logo" class="h-10 w-10 mr-2">
-                <span class="text-xl font-bold">ENERGYM⚡️</span>
-            </div>
-            <nav class="hidden md:flex space-x-4">
-                <a href="#" class="text-white hover:text-gray-300">หน้าหลัก</a>
-                <a href="#workouts" class="text-white hover:text-gray-300">การออกกำลังกาย</a>
-                <a href="#about" class="text-white hover:text-gray-300">เกี่ยวกับเรา</a>
-                <a href="#contact" class="text-white hover:text-gray-300">ติดต่อเรา</a>
-                <a href="#profile" class="text-white hover:text-gray-300">โปรไฟล์</a>
-            </nav>
-            <div>
-                <button onclick="showLoginForm()" class="bg-transparent hover:bg-white hover:text-gray-800 text-white font-semibold py-2 px-4 border border-white hover:border-transparent rounded">
-                    เข้าสู่ระบบ
-                </button>
-                <button onclick="showSignupForm()" class="bg-white hover:bg-gray-200 text-gray-800 font-semibold py-2 px-4 border border-gray-400 rounded shadow">
-                    สมัครสมาชิก
-                </button>
-            </div>
-        </div>
-    </header>
-
-    <main>
-        <section id="hero" class="relative h-[500px] bg-gray-200 overflow-hidden">
-            <img src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80" alt="Woman exercising" class="absolute inset-0 w-full h-full object-cover">
-            <div class="absolute inset-0 bg-black bg-opacity-50"></div>
-            <div class="relative container mx-auto px-4 h-full flex items-center">
-                <div class="text-white max-w-lg">
-                    <h1 class="text-4xl font-bold mb-4">ตารางวิ่งยังมีวันพัก</h1>
-                    <p class="text-xl mb-6">แต่ถ้าคุณหยุดรักพักยังไง</p>
-                    <button onclick="showProfileForm()" class="bg-white hover:bg-gray-100 text-gray-800 font-semibold py-2 px-4 border border-gray-400 rounded shadow">
-                        เริ่มต้นตอนนี้
-                    </button>
-                </div>
-            </div>
-        </section>
-
-        <section id="workouts" class="py-16 bg-white">
-            <div class="container mx-auto px-4">
-                <h2 class="text-3xl font-bold text-center mb-12">หมวดหมู่การฝึกออกกำลังกาย</h2>
-                <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4">
-                    <div class="bg-gray-100 rounded-lg p-4 text-center">
-                        <div class="text-4xl mb-2">💪</div>
-                        <h3 class="text-lg font-semibold">โปรแกรมแขน</h3>
-                    </div>
-                    <div class="bg-gray-100 rounded-lg p-4 text-center">
-                        <div class="text-4xl mb-2">🦾</div>
-                        <h3 class="text-lg font-semibold">โปรแกรมไหล่</h3>
-                    </div>
-                    <div class="bg-gray-100 rounded-lg p-4 text-center">
-                        <div class="text-4xl mb-2">🫁</div>
-                        <h3 class="text-lg font-semibold">โปรแกรมอก</h3>
-                    </div>
-                    <div class="bg-gray-100 rounded-lg p-4 text-center">
-                        <div class="text-4xl mb-2">🦵</div>
-                        <h3 class="text-lg font-semibold">โปรแกรมขา</h3>
-                    </div>
-                    <div class="bg-gray-100 rounded-lg p-4 text-center">
-                        <div class="text-4xl mb-2">🦴</div>
-                        <h3 class="text-lg font-semibold">โปรแกรมหลัง</h3>
+<body>
+    <div th:replace="~{layout :: body(~{::title}, ~{::main})}">
+        <title>ENERGYM - หน้าหลัก</title>
+        <main>
+            <section class="relative h-[500px] bg-gray-200 overflow-hidden">
+                <img src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80" alt="Woman exercising" class="absolute inset-0 w-full h-full object-cover">
+                <div class="absolute inset-0 bg-black bg-opacity-50"></div>
+                <div class="relative container mx-auto px-4 h-full flex items-center">
+                    <div class="text-white max-w-lg">
+                        <h1 class="text-4xl font-bold mb-4">ตารางวิ่งยังมีวันพัก</h1>
+                        <p class="text-xl mb-6">แต่ถ้าคุณหยุดรักพักยังไง</p>
+                        <a href="/profile" class="bg-white hover:bg-gray-100 text-gray-800 font-semibold py-2 px-4 border border-gray-400 rounded shadow">
+                            เริ่มต้นตอนนี้
+                        </a>
                     </div>
                 </div>
-            </div>
-        </section>
+            </section>
 
-        <section id="featured-workouts" class="py-16 bg-gray-50">
-            <div class="container mx-auto px-4">
-                <h2 class="text-3xl font-bold text-center mb-12">การออกกำลังกายแนะนำ</h2>
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                    <div class="bg-white rounded-lg shadow-md overflow-hidden">
-                        <img src="https://images.unsplash.com/photo-1517836357463-d25dfeac3438?ixlib=rb-1.2.1&auto=format&fit=crop&w=1650&q=80" alt="เบิร์นไขมันทั้งตัว" class="w-full h-48 object-cover">
-                        <div class="p-4">
-                            <h3 class="text-xl font-semibold mb-2">เบิร์นไขมันทั้งตัว</h3>
-                            <p class="text-gray-600 mb-4">การออกกำลังกายแบบ HIIT 30 นาที</p>
-                            <button onclick="showExerciseDetail('hiit')" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
-                                เริ่มการออกกำลังกาย
-                            </button>
+            <section class="py-16 bg-white">
+                <div class="container mx-auto px-4">
+                    <h2 class="text-3xl font-bold text-center mb-12">หมวดหมู่การฝึกออกกำลังกาย</h2>
+                    <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4">
+                        <div class="bg-gray-100 rounded-lg p-4 text-center">
+                            <div class="text-4xl mb-2">💪</div>
+                            <h3 class="text-lg font-semibold">โปรแกรมแขน</h3>
+                        </div>
+                        <div class="bg-gray-100 rounded-lg p-4 text-center">
+                            <div class="text-4xl mb-2">🦾</div>
+                            <h3 class="text-lg font-semibold">โปรแกรมไหล่</h3>
+                        </div>
+                        <div class="bg-gray-100 rounded-lg p-4 text-center">
+                            <div class="text-4xl mb-2">🫁</div>
+                            <h3 class="text-lg font-semibold">โปรแกรมอก</h3>
+                        </div>
+                        <div class="bg-gray-100 rounded-lg p-4 text-center">
+                            <div class="text-4xl mb-2">🦵</div>
+                            <h3 class="text-lg font-semibold">โปรแกรมขา</h3>
+                        </div>
+                        <div class="bg-gray-100 rounded-lg p-4 text-center">
+                            <div class="text-4xl mb-2">🦴</div>
+                            <h3 class="text-lg font-semibold">โปรแกรมหลัง</h3>
                         </div>
                     </div>
-                    <!-- Add more featured workouts here -->
                 </div>
-            </div>
-        </section>
-
-        <section id="testimonials" class="py-16 bg-white">
-            <div class="container mx-auto px-4">
-                <h2 class="text-3xl font-bold text-center mb-12">เสียงจากสมาชิก</h2>
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                    <div class="bg-gray-100 rounded-lg p-6">
-                        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-1.2.1&auto=format&fit=crop&w=300&q=80" alt="สมชาย ใจดี" class="w-20 h-20 rounded-full mx-auto mb-4">
-                        <p class="text-center italic mb-4">"ฉันรู้สึกแข็งแรงขึ้นและมีพลังงานมากขึ้นหลังจากใช้ ENERGYM เพียงแค่ 2 เดือน!"</p>
-                        <p class="text-center font-semibold">สมชาย ใจดี</p>
-                    </div>
-                    <!-- Add more testimonials here -->
-                </div>
-            </div>
-        </section>
-    </main>
-
-    <footer class="bg-gray-800 text-white py-8">
-        <div class="container mx-auto px-4">
-            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
-                <div>
-                    <h3 class="text-lg font-semibold mb-4">ENERGYM⚡️</h3>
-                    <p class="text-sm">เราช่วยคุณสร้างร่างกายที่แข็งแรงและมีสุขภาพดี</p>
-                </div>
-                <div>
-                    <h4 class="text-lg font-semibold mb-4">ลิงก์ด่วน</h4>
-                    <ul class="space-y-2">
-                        <li><a href="#" class="hover:text-gray-300">หน้าหลัก</a></li>
-                        <li><a href="#workouts" class="hover:text-gray-300">การออกกำลังกาย</a></li>
-                        <li><a href="#" class="hover:text-gray-300">โภชนาการ</a></li>
-                        <li><a href="#" class="hover:text-gray-300">ชุมชน</a></li>
-                    </ul>
-                </div>
-                <div>
-                    <h4 class="text-lg font-semibold mb-4">ติดต่อเรา</h4>
-                    <p class="text-sm">อีเมล: info@energym.com</p>
-                    <p class="text-sm">โทร: 02-123-4567</p>
-                </div>
-                <div>
-                    <h4 class="text-lg font-semibold mb-4">ติดตามเรา</h4>
-                    <div class="flex space-x-4">
-                        <a href="#" class="hover:text-gray-300">Facebook</a>
-                        <a href="#" class="hover:text-gray-300">Instagram</a>
-                        <a href="#" class="hover:text-gray-300">Twitter</a>
-                    </div>
-                </div>
-            </div>
-            <div class="mt-8 pt-8 border-t border-gray-700 text-center text-sm">
-                <p>&copy; 2024 ENERGYM. สงวนลิขสิทธิ์ทั้งหมด.</p>
-            </div>
-        </div>
-    </footer>
-
-    <!-- Modal for login form -->
-    <div id="loginModal" class="fixed inset-0 bg-gray-600 bg-opacity-50 overflow-y-auto h-full w-full" style="display: none;">
-        <div class="relative top-20 mx-auto p-5 border w-96 shadow-lg rounded-md bg-white">
-            <div class="mt-3 text-center">
-                <h3 class="text-lg leading-6 font-medium text-gray-900">เข้าสู่ระบบ</h3>
-                <div class="mt-2 px-7 py-3">
-                    <input type="email" placeholder="อีเมล" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50">
-                    <input type="password" placeholder="รหัสผ่าน" class="mt-3 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50">
-                    <button onclick="login()" class="mt-4 w-full inline-flex justify-center rounded-md border border-transparent shadow-sm px-4 py-2 bg-blue-600 text-base font-medium text-white hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 sm:text-sm">
-                        เข้าสู่ระบบ
-                    </button>
-                </div>
-            </div>
-        </div>
+            </section>
+        </main>
     </div>
-
-    <!-- Modal for signup form -->
-    <div id="signupModal" class="fixed inset-0 bg-gray-600 bg-opacity-50 overflow-y-auto h-full w-full" style="display: none;">
-        <div class="relative top-20 mx-auto p-5 border w-96 shadow-lg rounded-md bg-white">
-            <div class="mt-3 text-center">
-                <h3 class="text-lg leading-6 font-medium text-gray-900">สมัครสมาชิก</h3>
-                <div class="mt-2 px-7 py-3">
-                    <input type="email" placeholder="อีเมล" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50">
-                    <input type="password" placeholder="รหัสผ่าน" class="mt-3 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50">
-                    <input type="password" placeholder="ยืนยันรหัสผ่าน" class="mt-3 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50">
-                    <button onclick="signup()" class="mt-4 w-full inline-flex justify-center rounded-md border border-transparent shadow-sm px-4 py-2 bg-blue-600 text-base font-medium text-white hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 sm:text-sm">
-                        สมัครสมาชิก
-                    </button>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- Modal for profile form -->
-    <div id="profileModal" class="fixed inset-0 bg-gray-600 bg-opacity-50 overflow-y-auto h-full w-full" style="display: none;">
-        <div class="relative top-20 mx-auto p-5 border w-96 shadow-lg rounded-md bg-white">
-            <div class="mt-3 text-center">
-                <h3 class="text-lg leading-6 font-medium text-gray-900">ข้อมูลของคุณ</h3>
-                <div class="mt-2 px-7 py-3">
-                    <input type="text" placeholder="ชื่อ" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50">
-                    <input type="number" placeholder="อายุ" class="mt-3 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50">
-                    <input type="number" placeholder="ส่วนสูง (ซม.)" class="mt-3 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50">
-                    <input type="number" placeholder="น้ำหนัก (กก.)" class="mt-3 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50">
-                    <select class="mt-3 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50">
-                        <option value="">เลือกเป้าหมายการออกกำลังกาย</option>
-                        <option value="ลดน้ำหนัก">ลดน้ำหนัก</option>
-                        <option value="เพิ่มกล้ามเนื้อ">เพิ่มกล้ามเนื้อ</option>
-                        <option value="เพิ่มความแข็งแรง">เพิ่มความแข็งแรง</option>
-                        <option value="เพิ่มความยืดหยุ่น">เพิ่มความยืดหยุ่น</option>
-                        <option value="ปรับปรุงสุขภาพทั่วไป">ปรับปรุงสุขภาพทั่วไป</option>
-                    </select>
-                    <button onclick="createWorkoutPlan()" class="mt-4 w-full inline-flex justify-center rounded-md border border-transparent shadow-sm px-4 py-2 bg-blue-600 text-base font-medium text-white hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 sm:text-sm">
-                        สร้างแผนออกกำลังกาย
-                    </button>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <script>
-        function showLoginForm() {
-            document.getElementById('loginModal').style.display = 'block';
-        }
-
-        function showSignupForm() {
-            document.getElementById('signupModal').style.display = 'block';
-        }
-
-        function showProfileForm() {
-            document.getElementById('profileModal').style.display = 'block';
-        }
-
-        function login() {
-            // Implement login logic here
-            alert('เข้าสู่ระบบสำเร็จ!');
-            document.getElementById('loginModal').style.display = 'none';
-        }
-
-        function signup() {
-            // Implement signup logic here
-            alert('สมัครสมาชิกสำเร็จ!');
-            document.getElementById('signupModal').style.display = 'none';
-        }
-
-        function createWorkoutPlan() {
-            // Implement workout plan creation logic here
-            alert('สร้างแผนออกกำลังกายสำเร็จ!');
-            document.getElementById('profileModal').style.display = 'none';
-        }
-
-        function showExerciseDetail(exerciseId) {
-            // Implement exercise detail display logic here
-            alert('แสดงรายละเอียดการออกกำลังกาย: ' + exerciseId);
-        }
-
-        // Close modals when clicking outside
-        window.onclick = function(event) {
-            if (event.target == document.getElementById('loginModal')) {
-                document.getElementById('loginModal').style.display = 'none';
-            }
-            if (event.target == document.getElementById('signupModal')) {
-                document.getElementById('signupModal').style.display = 'none';
-            }
-            if (event.target == document.getElementById('profileModal')) {
-                document.getElementById('profileModal').style.display = 'none';
-            }
-        }
-    </script>
 </body>
 </html>
