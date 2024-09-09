@@ -4,8 +4,10 @@ import { Input } from "@/components/ui/input";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import Header from '../components/Header';
 import Footer from '../components/Footer';
+import { useNavigate } from 'react-router-dom';
 
 const ProfilePage = () => {
+  const navigate = useNavigate();
   const [profile, setProfile] = useState({
     name: '',
     age: '',
@@ -35,6 +37,7 @@ const ProfilePage = () => {
     e.preventDefault();
     console.log('Profile updated:', profile);
     // Here you would typically send the data to your backend
+    navigate('/workout-plan', { state: { profile } });
   };
 
   return (
@@ -80,8 +83,7 @@ const ProfilePage = () => {
               ))}
             </div>
             <div className="flex space-x-4">
-              <Button type="submit" className="flex-1">บันทึก</Button>
-              <Button type="button" variant="outline" className="flex-1">แก้ไข</Button>
+              <Button type="submit" className="flex-1">สร้างแผนออกกำลังกาย</Button>
             </div>
           </form>
         </div>
