@@ -22,7 +22,7 @@ const LoginForm = () => {
       <div className="text-center space-y-2">
         <Link to="/signup" className="text-sm text-blue-600 hover:underline">สร้างบัญชีของคุณ</Link>
         <br />
-        <Link to="/forgot-password" className="text-sm text-blue-600 hover:underline">ลืมรหัสผ่าน?</Link>
+        <Link to="/password-recovery" className="text-sm text-blue-600 hover:underline">ลืมรหัสผ่าน?</Link>
       </div>
     </div>
   );

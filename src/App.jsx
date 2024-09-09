@@ -6,6 +6,8 @@ import { navItems } from "./nav-items";
 import LoginPage from "./pages/LoginPage";
 import WorkoutsPage from "./pages/WorkoutsPage";
 import SignupPage from "./pages/SignupPage";
+import PasswordRecoveryPage from "./pages/PasswordRecoveryPage";
+import ProfilePage from "./pages/ProfilePage";
 
 const queryClient = new QueryClient();
 
@@ -21,6 +23,8 @@ const App = () => (
           <Route path="/login" element={<LoginPage />} />
           <Route path="/workouts" element={<WorkoutsPage />} />
           <Route path="/signup" element={<SignupPage />} />
+          <Route path="/password-recovery" element={<PasswordRecoveryPage />} />
+          <Route path="/profile" element={<ProfilePage />} />
         </Routes>
       </BrowserRouter>
     </TooltipProvider>

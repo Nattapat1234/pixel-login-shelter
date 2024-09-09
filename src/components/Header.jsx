@@ -15,6 +15,7 @@ const Header = () => {
           <Link to="/workouts" className="text-white hover:text-gray-300">การออกกำลังกาย</Link>
           <Link to="/about" className="text-white hover:text-gray-300">เกี่ยวกับเรา</Link>
           <Link to="/contact" className="text-white hover:text-gray-300">ติดต่อเรา</Link>
+          <Link to="/profile" className="text-white hover:text-gray-300">โปรไฟล์</Link>
         </nav>
         <div>
           <Link to="/login">
