@@ -1,6 +1,7 @@
 import React from 'react';
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
+import { Link } from 'react-router-dom';
 
 const LoginForm = () => {
   return (
@@ -11,17 +12,17 @@ const LoginForm = () => {
       </div>
       <form className="space-y-4">
         <div>
-          <Input type="email" placeholder="Email" />
+          <Input type="email" placeholder="อีเมล" />
         </div>
         <div>
-          <Input type="password" placeholder="Password" />
+          <Input type="password" placeholder="รหัสผ่าน" />
         </div>
-        <Button className="w-full">ลงชื่อเข้าใช้งาน</Button>
+        <Button className="w-full">เข้าสู่ระบบ</Button>
       </form>
       <div className="text-center space-y-2">
-        <a href="#" className="text-sm text-blue-600 hover:underline">สร้างบัญชีของคุณ</a>
+        <Link to="/signup" className="text-sm text-blue-600 hover:underline">สร้างบัญชีของคุณ</Link>
         <br />
-        <a href="#" className="text-sm text-blue-600 hover:underline">ลืมรหัสผ่าน?</a>
+        <Link to="/forgot-password" className="text-sm text-blue-600 hover:underline">ลืมรหัสผ่าน?</Link>
       </div>
     </div>
   );
