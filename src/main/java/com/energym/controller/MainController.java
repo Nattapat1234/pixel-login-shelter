@@ -50,4 +50,19 @@ public class MainController {
     public String forgetPassword() {
         return "forget_password";
     }
+
+    @GetMapping("/workouts")
+    public String workouts() {
+        return "workouts";
+    }
+
+    @GetMapping("/exercise/{id}")
+    public String exerciseDetail() {
+        return "exercise_detail";
+    }
+
+    @GetMapping("/dashboard")
+    public String dashboard() {
+        return "dashboard";
+    }
 }
