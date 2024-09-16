@@ -3,24 +3,34 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ENERGYM - คอร์สออกกำลังกาย</title>
+    <title>ENERGYM - คอร์ส</title>
     <link rel="stylesheet" th:href="@{/css/styles.css}">
 </head>
 <body>
-    <header th:replace="fragments/header :: header"></header>
+    <header>
+        <nav>
+            <a href="/" class="logo">
+                <img src="/images/logo.png" alt="ENERGYM Logo">
+            </a>
+            <ul>
+                <li><a href="/">หน้าหลัก</a></li>
+                <li><a href="/courses">คอร์ส</a></li>
+                <li><a href="/profile">โปรไฟล์</a></li>
+                <li><a href="/login">เข้าสู่ระบบ</a></li>
+                <li><a href="/signup">สมัครสมาชิก</a></li>
+            </ul>
+        </nav>
+    </header>
 
     <main>
         <h1>คอร์สออกกำลังกาย</h1>
         <div class="course-grid">
-            <div th:each="course : ${courses}" class="course-card">
-                <img th:src="${course.imageUrl}" th:alt="${course.title}">
-                <h2 th:text="${course.title}">ชื่อคอร์ส</h2>
-                <p th:text="${course.shortDescription}">คำอธิบายสั้นๆ</p>
-                <a th:href="@{/course/{id}(id=${course.id})}" class="btn btn-secondary">ดูรายละเอียด</a>
-            </div>
+            <!-- Course items will be dynamically added here -->
         </div>
     </main>
 
-    <footer th:replace="fragments/footer :: footer"></footer>
+    <footer>
+        <p>&copy; 2024 ENERGYM. สงวนลิขสิทธิ์ทั้งหมด.</p>
+    </footer>
 </body>
 </html>
