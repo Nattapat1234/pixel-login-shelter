@@ -3,6 +3,7 @@ package com.energym.controller;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 
 @Controller
@@ -77,13 +78,26 @@ public class MainController {
     }
 
     @GetMapping("/exercise/{id}")
-    public String exerciseDetail(Model model) {
+    public String exerciseDetail(@PathVariable("id") Long id, Model model) {
         // Add logic to fetch exercise details and add to model
+        model.addAttribute("exerciseId", id);
         return "exercise_detail";
     }
 
     @GetMapping("/dashboard")
     public String dashboard() {
         return "dashboard";
+    }
+
+    @PostMapping("/profile")
+    public String updateProfile() {
+        // Handle profile update logic here
+        return "redirect:/workout-plan";
+    }
+
+    @GetMapping("/logout")
+    public String logout() {
+        // Handle logout logic here
+        return "redirect:/";
     }
 }
