@@ -1,7 +1,9 @@
 package com.energym.controller;
 
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
 
 @Controller
 public class MainController {
@@ -17,13 +19,25 @@ public class MainController {
     }
 
     @GetMapping("/login")
-    public String login() {
+    public String loginForm() {
         return "login";
     }
 
+    @PostMapping("/login")
+    public String login() {
+        // Handle login logic here
+        return "redirect:/dashboard";
+    }
+
     @GetMapping("/signup")
-    public String signup() {
+    public String signupForm() {
         return "signup";
+    }
+
+    @PostMapping("/signup")
+    public String signup() {
+        // Handle signup logic here
+        return "redirect:/login";
     }
 
     @GetMapping("/profile")
@@ -33,7 +47,7 @@ public class MainController {
 
     @GetMapping("/workout-plan")
     public String workoutPlan() {
-        return "workout-plan";
+        return "workout_plan";
     }
 
     @GetMapping("/about")
@@ -47,8 +61,14 @@ public class MainController {
     }
 
     @GetMapping("/forget-password")
-    public String forgetPassword() {
+    public String forgetPasswordForm() {
         return "forget_password";
+    }
+
+    @PostMapping("/forget-password")
+    public String forgetPassword() {
+        // Handle forget password logic here
+        return "redirect:/login";
     }
 
     @GetMapping("/workouts")
@@ -57,7 +77,8 @@ public class MainController {
     }
 
     @GetMapping("/exercise/{id}")
-    public String exerciseDetail() {
+    public String exerciseDetail(Model model) {
+        // Add logic to fetch exercise details and add to model
         return "exercise_detail";
     }
 
