@@ -35,4 +35,19 @@ public class MainController {
     public String workoutPlan() {
         return "workout-plan";
     }
+
+    @GetMapping("/about")
+    public String about() {
+        return "about";
+    }
+
+    @GetMapping("/contact")
+    public String contact() {
+        return "contact";
+    }
+
+    @GetMapping("/forget-password")
+    public String forgetPassword() {
+        return "forget_password";
+    }
 }
