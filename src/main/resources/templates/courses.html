@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="th" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ENERGYM - คอร์สออกกำลังกาย</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 min-h-screen">
+    <header th:replace="~{fragments/header :: header}"></header>
+
+    <main class="container mx-auto px-4 py-8">
+        <h1 class="text-3xl font-bold text-center mb-8">คอร์สออกกำลังกาย</h1>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <!-- Course Card 1 -->
+            <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                <img src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48" alt="Body Weight Training" class="w-full h-48 object-cover">
+                <div class="p-4">
+                    <h2 class="text-xl font-semibold mb-2">Body Weight Training</h2>
+                    <p class="text-gray-600 mb-4">เสริมสร้างกล้ามเนื้อโดยใช้น้ำหนักตัว</p>
+                    <a href="/course/1" class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600">ดูรายละเอียด</a>
+                </div>
+            </div>
+            <!-- Course Card 2 -->
+            <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                <img src="https://images.unsplash.com/photo-1518611012118-696072aa579a" alt="Cardio Blast" class="w-full h-48 object-cover">
+                <div class="p-4">
+                    <h2 class="text-xl font-semibold mb-2">Cardio Blast</h2>
+                    <p class="text-gray-600 mb-4">เผาผลาญไขมันด้วยการออกกำลังกายแบบคาร์ดิโอ</p>
+                    <a href="/course/2" class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600">ดูรายละเอียด</a>
+                </div>
+            </div>
+            <!-- Course Card 3 -->
+            <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                <img src="https://images.unsplash.com/photo-1541534741688-6078c6bfb5c5" alt="Strength Training" class="w-full h-48 object-cover">
+                <div class="p-4">
+                    <h2 class="text-xl font-semibold mb-2">Strength Training</h2>
+                    <p class="text-gray-600 mb-4">สร้างกล้ามเนื้อและเพิ่มความแข็งแรง</p>
+                    <a href="/course/3" class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600">ดูรายละเอียด</a>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer th:replace="~{fragments/footer :: footer}"></footer>
+</body>
+</html>

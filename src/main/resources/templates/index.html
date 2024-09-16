@@ -1,54 +1,58 @@
 <!DOCTYPE html>
 <html lang="th" xmlns:th="http://www.thymeleaf.org">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ENERGYM - หน้าหลัก</title>
+    <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body>
-    <div th:replace="~{layout :: body(~{::title}, ~{::main})}">
-        <title>ENERGYM - หน้าหลัก</title>
-        <main>
-            <section class="relative h-[500px] bg-gray-200 overflow-hidden">
-                <img src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80" alt="Woman exercising" class="absolute inset-0 w-full h-full object-cover">
-                <div class="absolute inset-0 bg-black bg-opacity-50"></div>
-                <div class="relative container mx-auto px-4 h-full flex items-center">
-                    <div class="text-white max-w-lg">
-                        <h1 class="text-4xl font-bold mb-4">ตารางวิ่งยังมีวันพัก</h1>
-                        <p class="text-xl mb-6">แต่ถ้าคุณหยุดรักพักยังไง</p>
-                        <a href="/profile" class="bg-white hover:bg-gray-100 text-gray-800 font-semibold py-2 px-4 border border-gray-400 rounded shadow">
-                            เริ่มต้นตอนนี้
-                        </a>
-                    </div>
-                </div>
-            </section>
+<body class="bg-gray-100 min-h-screen">
+    <header th:replace="~{fragments/header :: header}"></header>
 
-            <section class="py-16 bg-white">
-                <div class="container mx-auto px-4">
-                    <h2 class="text-3xl font-bold text-center mb-12">หมวดหมู่การฝึกออกกำลังกาย</h2>
-                    <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4">
-                        <div class="bg-gray-100 rounded-lg p-4 text-center">
-                            <div class="text-4xl mb-2">💪</div>
-                            <h3 class="text-lg font-semibold">โปรแกรมแขน</h3>
-                        </div>
-                        <div class="bg-gray-100 rounded-lg p-4 text-center">
-                            <div class="text-4xl mb-2">🦾</div>
-                            <h3 class="text-lg font-semibold">โปรแกรมไหล่</h3>
-                        </div>
-                        <div class="bg-gray-100 rounded-lg p-4 text-center">
-                            <div class="text-4xl mb-2">🫁</div>
-                            <h3 class="text-lg font-semibold">โปรแกรมอก</h3>
-                        </div>
-                        <div class="bg-gray-100 rounded-lg p-4 text-center">
-                            <div class="text-4xl mb-2">🦵</div>
-                            <h3 class="text-lg font-semibold">โปรแกรมขา</h3>
-                        </div>
-                        <div class="bg-gray-100 rounded-lg p-4 text-center">
-                            <div class="text-4xl mb-2">🦴</div>
-                            <h3 class="text-lg font-semibold">โปรแกรมหลัง</h3>
-                        </div>
+    <main>
+        <section class="relative h-[500px] bg-gray-200 overflow-hidden">
+            <img src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80" alt="Woman exercising" class="absolute inset-0 w-full h-full object-cover">
+            <div class="absolute inset-0 bg-black bg-opacity-50"></div>
+            <div class="relative container mx-auto px-4 h-full flex items-center">
+                <div class="text-white max-w-lg">
+                    <h1 class="text-4xl font-bold mb-4">ตารางวิ่งยังมีวันพัก</h1>
+                    <p class="text-xl mb-6">แต่ถ้าคุณหยุดรักพักยังไง</p>
+                    <a href="/courses" class="bg-white hover:bg-gray-100 text-gray-800 font-semibold py-2 px-4 border border-gray-400 rounded shadow">
+                        ดูคอร์สทั้งหมด
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <section class="py-16 bg-white">
+            <div class="container mx-auto px-4">
+                <h2 class="text-3xl font-bold text-center mb-12">หมวดหมู่การฝึกออกกำลังกาย</h2>
+                <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4">
+                    <div class="bg-gray-100 rounded-lg p-4 text-center">
+                        <div class="text-4xl mb-2">💪</div>
+                        <h3 class="text-lg font-semibold">โปรแกรมแขน</h3>
+                    </div>
+                    <div class="bg-gray-100 rounded-lg p-4 text-center">
+                        <div class="text-4xl mb-2">🦾</div>
+                        <h3 class="text-lg font-semibold">โปรแกรมไหล่</h3>
+                    </div>
+                    <div class="bg-gray-100 rounded-lg p-4 text-center">
+                        <div class="text-4xl mb-2">🫁</div>
+                        <h3 class="text-lg font-semibold">โปรแกรมอก</h3>
+                    </div>
+                    <div class="bg-gray-100 rounded-lg p-4 text-center">
+                        <div class="text-4xl mb-2">🦵</div>
+                        <h3 class="text-lg font-semibold">โปรแกรมขา</h3>
+                    </div>
+                    <div class="bg-gray-100 rounded-lg p-4 text-center">
+                        <div class="text-4xl mb-2">🦴</div>
+                        <h3 class="text-lg font-semibold">โปรแกรมหลัง</h3>
                     </div>
                 </div>
-            </section>
-        </main>
-    </div>
+            </div>
+        </section>
+    </main>
+
+    <footer th:replace="~{fragments/footer :: footer}"></footer>
 </body>
 </html>

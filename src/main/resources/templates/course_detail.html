@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="th" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ENERGYM - รายละเอียดคอร์ส</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 min-h-screen">
+    <header th:replace="~{fragments/header :: header}"></header>
+
+    <main class="container mx-auto px-4 py-8">
+        <div class="bg-white rounded-lg shadow-md overflow-hidden">
+            <img th:src="${course.imageUrl}" th:alt="${course.title}" class="w-full h-64 object-cover">
+            <div class="p-6">
+                <h1 class="text-3xl font-bold mb-4" th:text="${course.title}">ชื่อคอร์ส</h1>
+                <p class="text-gray-600 mb-4" th:text="${course.description}">รายละเอียดคอร์ส</p>
+                <div class="mb-4">
+                    <h2 class="text-xl font-semibold mb-2">รายละเอียดการเรียน</h2>
+                    <ul class="list-disc list-inside">
+                        <li th:each="detail : ${course.details}" th:text="${detail}">รายละเอียด</li>
+                    </ul>
+                </div>
+                <div class="mb-4">
+                    <h2 class="text-xl font-semibold mb-2">ระยะเวลา</h2>
+                    <p th:text="${course.duration}">ระยะเวลาคอร์ส</p>
+                </div>
+                <div class="mb-4">
+                    <h2 class="text-xl font-semibold mb-2">ราคา</h2>
+                    <p th:text="${course.price}">ราคาคอร์ส</p>
+                </div>
+                <a href="#" class="bg-blue-500 text-white px-6 py-2 rounded hover:bg-blue-600">ลงทะเบียนเรียน</a>
+            </div>
+        </div>
+    </main>
+
+    <footer th:replace="~{fragments/footer :: footer}"></footer>
+</body>
+</html>
