@@ -1,6 +1,7 @@
 import React from 'react';
 import { Button } from "@/components/ui/button";
 import { ChevronRight } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 const HeroSection = () => {
   return (
@@ -15,7 +16,7 @@ const HeroSection = () => {
         <div className="text-white max-w-lg">
           <h1 className="text-4xl font-bold mb-4">ตารางวิ่งยังมีวันพัก</h1>
           <p className="text-xl mb-6">แต่ถ้าคุณหยุดรักพักยังไง</p>
-          <Button className="text-lg px-6 py-3">
+          <Button as={Link} to="/courses" className="text-lg px-6 py-3">
             เริ่มต้นตอนนี้
             <ChevronRight className="ml-2 h-5 w-5" />
           </Button>

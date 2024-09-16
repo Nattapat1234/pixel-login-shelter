@@ -7,8 +7,12 @@ const Header = () => {
     <header className="bg-gray-800 text-white shadow-sm">
       <div className="container mx-auto px-4 py-4 flex justify-between items-center">
         <div className="flex items-center">
-          <img src="/placeholder.svg" alt="Energym Logo" className="h-10 w-10 mr-2" />
-          <span className="text-xl font-bold">ENERGYM⚡️</span>
+          <Link to="/">
+            <img src="/placeholder.svg" alt="Energym Logo" className="h-10 w-10 mr-2" />
+          </Link>
+          <Link to="/">
+            <span className="text-xl font-bold">ENERGYM⚡️</span>
+          </Link>
         </div>
         <nav className="hidden md:flex space-x-4">
           <Link to="/" className="text-white hover:text-gray-300">หน้าหลัก</Link>
